@@ -1,5 +1,5 @@
-const express = require("express");
-const connectDB = require("./db");
+import express from "express";
+import connectDB from "./db.js";
 
 const app = express();
 
@@ -8,4 +8,4 @@ connectDB();
 app.use(express.json());
 app.get("/", (req, res) => res.send("Welcome to E-Commerce"));
 
-module.exports = app;
+export default app;
